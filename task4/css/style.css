@@ -1,9 +1,13 @@
+.wrapper {
+    background-color: rgba(238, 243, 250, 1);
+}
+
 /***************************/
 /*         task4_1         */
 /***************************/
 
 .header-nav {
-    background-color: rgb(83, 83, 158);
+    background-color: rgba(51, 102, 153, 1);
     width: 8rem;
 }
 
@@ -14,19 +18,20 @@
 
 .header-nav ul li {
     list-style-type: none;
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(252, 252, 249);
     margin: 0.4rem;
     padding: 0.2rem;
     text-transform: uppercase;
 }
 
 .header-nav ul li:hover {
-    background-color: rgb(245, 222, 179);
+    color: rgba(23, 71, 137, 1);
+    background-color: rgba(255, 255, 204, 1);
 }
 
 .header-nav a {
     text-decoration: none;
-    color: rgb(113, 113, 216)
+    color: rgba(118, 163, 214, 1)
 }
 
 /***************************/
@@ -57,16 +62,18 @@
 /***************************/
 
 .side-bar {
-    width: 16rem;
+    width: 15rem;
     background-color: rgb(255, 255, 255);
 }
 
 .side-bar .list-general {
     list-style-image: url('../img/minus.png');
+    padding: 0.8rem 1.8rem;
 }
 
 .side-bar .list-secondary {
     list-style-image: url('../img/point.png');
+    margin-bottom: 1rem;
 }
 
 .side-bar a {

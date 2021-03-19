@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+		<title>Вариант 1</title>
+
+		<style>
+			body {
+				max-width: 920px;
+				margin: 1rem  auto;
+				background-color: #4c5263;
+				font-family: Arial;
+				font-size: 12px;
+				color: #ffffff;
+			}
+
+			input, select, textarea, nav, .side-bar-footer {
+				border-radius: 5px;
+			}
+			
+			h2, h3, .content-main p {
+				margin: 0;
+			}
+			
+			main {
+				display: flex;
+			}
+			
+			.side-bar {
+				width: 25%;
+				min-height: 200px;
+			}
+
+			nav ul {
+				margin: 0;
+				padding: 0 2rem;
+				background-color: #3a3d46;
+				
+				list-style-image: url("list-image.png");
+			}
+
+			nav li {
+				padding: 0.6rem;
+				border-top: #4c5263 solid 1px;
+				border-bottom: #4c5263 solid 1px;
+			}
+
+			nav a {
+				color: #fff;
+				text-decoration: none;
+			}
+
+			.side-bar-footer {
+				margin-top: 2rem;
+				background-color: #3a3d46;
+				padding: 0.6rem;
+			}
+
+			.side-bar-footer p {
+				font-style: italic;
+			}
+
+			.content-main a, .side-bar-footer a {
+				color: #e689e0;
+			}
+
+			.content {
+				width: 75%;
+				padding: 0 0.6rem;
+			}
+			
+			.content-main, .content-images, .content-list {
+				margin-bottom: 1rem;
+			}
+
+			.row {
+				display: flex;
+				justify-content: space-between;
+			}
+
+			.col {
+				width: 32%;
+			}
+
+			.content-select {
+				margin-top: 5rem;
+			}
+
+			.select-item {
+				margin: 1rem 0;
+			}
+
+			.select-item label {
+				color: #dcb6ab;
+				font-size: 12px;
+			}
+
+			.select-item .input-text {
+				padding: 0.3rem;
+				width: 25%;
+			}
+
+			.select-item .input-select {
+				padding: 0.3rem;
+				width: 27%;
+			}
+
+			.select-item textarea {
+				min-height: 8rem;
+				min-width: 20rem;
+			}
+
+			.btn {
+				width: 15%;
+				padding: 0.3rem;
+				background: linear-gradient(#e689e0, #9198e5);
+				border: none;
+				color: #fff;
+			}
+		</style>
+	</head>
+
+	<body>
+		<main>
+			<div class="side-bar">
+				<nav>
+					<ul>
+						<li><a href="#">Natus error sit</a></li>
+						<li><a href="#">Natus error sit</a></li>
+						<li><a href="#">Natus error sit</a></li>
+						<li><a href="#">Natus error sit</a></li>
+						<li><a href="#">Natus error sit</a></li>
+						<li><a href="#">Natus error sit</a></li>
+						<li><a href="#">Natus error sit</a></li>
+						<li><a href="#">Natus error sit</a></li>
+					</ul>	
+				</nav>
+				<div class="side-bar-footer">
+					<h3>Left block</h3>
+					<p>
+						Asdasdas asdasd awsd ff asef aesf asdf aef asdf afdfgdfsg hlkj'ofj 
+						aposdf'po ;'lk' ;ljks'pjfisjoiuh uishgrlisuerl nlasiurnfisuernlf nlsier
+						a'dsk'fok a'sdokf'oaksd
+					</p>
+					<a href="#">Read More >></a>
+				</div>
+			</div>
+			<div class="content">
+				<section class="content-main">
+					<h2>Lorem ipsum dolor sit amet</h2>
+					<p>
+						Asdasdas asdasd awsd <a href="#">ff asef aesf</a> asdf aef asdf afdfgdfsg hlkj'ofj 
+						aposdf'po ;'lk' ;ljks'pjfisjoiuh uishgrlisuerl nlasiurnfisuernlf nlsier
+						a'dsk'fok a'sdokf'oaksd msdfkngksdfn/kmn sklfdg lskndf/gnsk/dfgn/l kn/s,s 
+						lisdfg; .sdfg; s'dfg'sdfgl''.
+					</p>
+				</section>
+				<section class="content-images">
+					<h2>Images</h2>
+					<div class="row">
+						<div class="col"><img src="image.png"></div>
+						<div class="col"><img src="image.png"></div>
+						<div class="col"><img src="image.png"></div>
+					</div>
+				</section>
+				<section>
+					<h2>Lists and Descriptions</h2>
+					<div class="row">
+						<div class="col">
+							<ul>
+								<li>qwertyyiop</li>
+								<li>qwertyyiop</li>
+								<li>qwertyyiop</li>
+								<li>qwertyyiop</li>
+							</ul>
+						</div>
+						<div class="col">
+							<ol>
+								<li>qwertyyiop</li>
+								<li><i>qwertyyiop</i></li>
+								<li>qwertyyiop</li>
+								<li><i>qwertyyiop</i></li>
+							</ol>
+						</div>
+						<div class="col">
+							<ol style="list-style: none;">
+								<li>qwertyyiop</li>
+								<li><i>qwertyyiop</i></li>
+								<li>qwertyyiop</li>
+								<li><i>qwertyyiop</i></li>
+							</ol>
+						</div>
+					</div>
+				</section>
+				<section class="content-select">
+					<form>
+						<div class="select-item">
+							<label>Text:</label><br>
+							<input class="input-text" placeholder="Input type text">
+						</div>
+						<div class="select-item">
+							<label>Select:</label><br>
+							<select class="input-select">
+								<option>Option</option>
+								<option>Option</option>
+								<option>Option</option>
+								<option>Option</option>
+								<option>Option</option>
+							</select>
+						</div>
+						<div class="select-item">
+							<input type="checkbox">
+							<label>Asd sdf eefergerg serg sreg serrrgg.</label><br>
+							<input type="radio">
+							<label>Lglshfh iusheriug lsiuregiuhrguls serg.</label><br>
+						</div>
+						<div class="select-item">
+							<label>Textarea:</label><br>
+							<textarea class="input" placeholder="Input type text">
+							</textarea>
+						</div>
+						<input class="btn" type="button" value="Button">
+					</form>
+				</section>
+			</div>
+		</main>
+	</body>
+</html>

@@ -2,7 +2,7 @@ const RUB = String.fromCharCode(0x20BD);
 
 function createElementWithText(elementName, elementText) {
   let element = document.createElement(elementName);
-  element.appendChild(document.createTextNode(elementText));
+  element.textContent = elementText;
 
   return element;
 }
@@ -19,15 +19,35 @@ const getCountText = (count) =>
 
 function createProductCol(row, product) {
   let productDiv = document.createElement('div');
-  productDiv.className = 'col';
+  productDiv.className = 'col-3 m-1';
 
-  productDiv.appendChild(createElementWithText('h3', product.name));
-  productDiv.appendChild(createImg(product.imagePath));
-  productDiv.appendChild(createElementWithText('h4', getCountText(product.count)));
-  productDiv.appendChild(createElementWithText('h5', product.price + RUB));
-  productDiv.appendChild(createElementWithText('p', product.description));
+  let cardDiv = document.createElement('div');
+  cardDiv.className = 'card';
 
-  row.insertBefore(productDiv, row.firstChild.nextSibling);
+  let img = new Image();
+  img.src = product.imagePath;
+  img.className = 'card-img mask';
+
+  let cardText = document.createElement('div');
+  cardText.className = 'card-img-overlay d-flex flex-column justify-content-lg-end';
+
+  let productName = document.createElement('h4');
+  productName.className = 'text-light';
+  productName.textContent = product.name;
+
+  let productCount = document.createElement('span');
+  productCount.className = 'w-50 text-white text-center ' + (product.count > 0 ? 'bg-success' : 'bg-danger');
+  productCount.textContent = getCountText(product.count);
+
+  cardText.appendChild(productName);
+  cardText.appendChild(productCount);
+
+  cardDiv.appendChild(img);
+  cardDiv.appendChild(cardText);
+
+  productDiv.appendChild(cardDiv);
+
+  row.appendChild(productDiv);
 }
 
 function getData(button) {

@@ -2,45 +2,48 @@ let data = {
   "products": [
     {
       "name": "productname1",
-      "price": 100,
       "count": 0,
-      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, doloribus",
-      "imagePath": "https://picsum.photos/330?random=1"
+      "imagePath": "https://picsum.photos/360?grayscale?random=1"
     },
     {
       "name": "productname2",
-      "price": 200,
       "count": 10,
-      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, doloribus",
-      "imagePath": "https://picsum.photos/330?random=2"
+      "imagePath": "https://picsum.photos/360?grayscale?random=2"
     },
     {
       "name": "productname3",
-      "price": 20,
       "count": 25,
-      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, doloribus",
-      "imagePath": "https://picsum.photos/330?random=3"
+      "imagePath": "https://picsum.photos/360?grayscale?random=3"
     },
     {
       "name": "productname4",
-      "price": 100,
-      "count": 0,
-      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, doloribus",
-      "imagePath": "https://picsum.photos/330?random=4"
+      "count": 5,
+      "imagePath": "https://picsum.photos/360?grayscale?random=4"
     },
     {
       "name": "productname5",
-      "price": 100,
-      "count": 14,
-      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, doloribus",
-      "imagePath": "https://picsum.photos/330?random=5"
+      "count": 0,
+      "imagePath": "https://picsum.photos/360?grayscale?random=5"
     },
     {
       "name": "productname6",
-      "price": 120,
       "count": 22,
-      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, doloribus",
-      "imagePath": "https://picsum.photos/330?random=6"
+      "imagePath": "https://picsum.photos/360?grayscale?random=6"
+    },
+    {
+      "name": "productname7",
+      "count": 100,
+      "imagePath": "https://picsum.photos/360?grayscale?random=7"
+    },
+    {
+      "name": "productname8",
+      "count": 0,
+      "imagePath": "https://picsum.photos/360?grayscale?random=8"
+    },
+    {
+      "name": "productname9",
+      "count": 0,
+      "imagePath": "https://picsum.photos/360?grayscale?random=9"
     }
   ]
 };

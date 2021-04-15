@@ -1,43 +1,40 @@
-const RUB = String.fromCharCode(0x20BD);
+const getCountText = (count) =>
+  count > 0 ? 'В наличии: ' + count : 'Нет в наличии';
 
-function createElementWithText(elementName, elementText) {
-  let element = document.createElement(elementName);
-  element.textContent = elementText;
+function getElement(element, className, text) {
+  let el = document.createElement(element);
 
-  return element;
+  if (className != undefined) el.className = className;
+  if (text != undefined) el.textContent = text;
+
+  return el;
 }
 
-function createImg(src) {
+function getImage(src, className) {
   let img = new Image();
+  img.className = className;
   img.src = src;
 
   return img;
 }
 
-const getCountText = (count) =>
-  count > 0 ? 'В наличии: ' + count : 'Нет в наличии';
-
 function createProductCol(row, product) {
-  let productDiv = document.createElement('div');
-  productDiv.className = 'col-3 m-1';
+  let productDiv = getElement('div', 'col-3 m-1');
+  let cardDiv = getElement('div', 'card');
 
-  let cardDiv = document.createElement('div');
-  cardDiv.className = 'card';
+  let img = getImage(product.imagePath, 'card-img mask');
+  
+  let cardText = getElement(
+                      'div',
+                      'card-img-overlay d-flex flex-column justify-content-lg-end'
+                    );
 
-  let img = new Image();
-  img.src = product.imagePath;
-  img.className = 'card-img mask';
-
-  let cardText = document.createElement('div');
-  cardText.className = 'card-img-overlay d-flex flex-column justify-content-lg-end';
-
-  let productName = document.createElement('h4');
-  productName.className = 'text-light';
-  productName.textContent = product.name;
-
-  let productCount = document.createElement('span');
-  productCount.className = 'w-50 text-white text-center ' + (product.count > 0 ? 'bg-success' : 'bg-danger');
-  productCount.textContent = getCountText(product.count);
+  let productName = getElement('h4', 'text-light', product.name);
+  let productCount = getElement(
+                      'span',
+                      'w-50 text-white text-center ' + (product.count > 0 ? 'bg-success' : 'bg-danger'),
+                      getCountText(product.count)
+                    );
 
   cardText.appendChild(productName);
   cardText.appendChild(productCount);

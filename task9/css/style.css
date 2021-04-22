@@ -1,9 +1,3 @@
-body {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-
 #img-collection {
   width: 18%;
   display: flex;
@@ -12,6 +6,9 @@ body {
 }
 
 #wrap {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   margin: 1rem auto;
   max-width: 1080px;
 }

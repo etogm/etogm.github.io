@@ -1,12 +1,13 @@
-function drawChart(name, prices, timestamp) {
+function drawStockChart(element, stock) {
+  const color = 'rgb(71, 177, 44)';
   const myData = {
-    labels: timestamp,
+    labels: stock.timestamp,
     datasets: [
       {
-        label: name,
-        backgroundColor: 'rgb(255, 99, 132)',
-        borderColor: 'rgb(255, 99, 132)',
-        data: prices,
+        label: stock.name,
+        backgroundColor: color,
+        borderColor: color,
+        data: stock.prices
       },
     ],
   };
@@ -14,8 +15,8 @@ function drawChart(name, prices, timestamp) {
   const config = {
     type: 'line',
     data: myData,
-    options: {},
+    options: {}
   };
 
-  var myChart = new Chart(document.getElementById('myChart'), config);
+  return new Chart(element, config);
 }

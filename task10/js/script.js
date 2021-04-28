@@ -1,6 +1,7 @@
 let url = 'https://etogm.github.io/finance/aapl.json';
 
-let canvas = document.querySelector('#myChart');
+let lineChart = document.querySelector('#line-chart');
+let barChart = document.querySelector('#bar-chart');
 let info = document.querySelector('#info');
 let chart;
 
@@ -24,6 +25,9 @@ getData(url).then(data => {
     timestamp: data.spark.result[0].response[0].timestamp.map(getTime)
   };
 
-  chart = drawStockChart(canvas, stock);
   outputInfo(stock);
+
+  chart = drawStockChart(lineChart, 'line', stock);
+  stock.prices = stock.prices.map(price => (price / stock.prices[0] - 1) * 100);
+  chart = drawStockChart(barChart, 'bar', stock);
 });

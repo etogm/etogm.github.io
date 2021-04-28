@@ -1,4 +1,4 @@
-function drawStockChart(element, stock) {
+function drawStockChart(element, chartType, stock) {
   const color = 'rgb(71, 177, 44)';
   const myData = {
     labels: stock.timestamp,
@@ -13,7 +13,7 @@ function drawStockChart(element, stock) {
   };
 
   const config = {
-    type: 'line',
+    type: chartType,
     data: myData,
     options: {}
   };

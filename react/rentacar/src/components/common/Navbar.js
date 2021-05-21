@@ -1,0 +1,81 @@
+import React from 'react';
+import { Link } from 'react-router-dom';
+
+const Navbar = () => {
+
+  return (
+    <nav className='navbar navbar-expand-lg navbar-dark bg-primary shadow'>
+      <div className='container'>
+        <Link className='navbar-brand navbar-brand text-shadow' to='/'>
+          rent-a-car.ru
+        </Link>
+        <button
+          className='navbar-toggler'
+          type='button'
+          data-mdb-toggle='collapse'
+          data-mdb-target='#navbarRightAlignExample'
+        >
+          <i className='fas fa-bars'></i>
+        </button>
+        <div className='collapse navbar-collapse' id='navbarRightAlignExample'>
+          <ul className='navbar-nav ms-auto mb-2 mb-lg-0'>
+            <li className='nav-item'>
+              <Link className='nav-link text-white' to='/find'>
+                Поиск
+              </Link>
+            </li>
+
+            <li className='nav-item dropdown'>
+              <div className='nav-link text-white' type='button'>
+                Язык: <strong>RU</strong>
+              </div>
+              <ul className='dropdown-menu'>
+                <li>
+                  <div className='dropdown-item' href='#'>
+                    RU
+                  </div>
+                </li>
+                <li>
+                  <div className='dropdown-item' href='#'>
+                    ENG
+                  </div>
+                </li>
+              </ul>
+            </li>
+
+            <li className='nav-item dropdown'>
+              <div className='nav-link text-white' type='button'>
+                Валюта: <strong>RUB</strong>
+              </div>
+              <ul className='dropdown-menu'>
+                <li>
+                  <div className='dropdown-item' href='#'>
+                    RUB
+                  </div>
+                </li>
+                <li>
+                  <div className='dropdown-item' href='#'>
+                    USD
+                  </div>
+                </li>
+                <li>
+                  <div className='dropdown-item' href='#'>
+                    EUR
+                  </div>
+                </li>
+              </ul>
+            </li>
+
+            <li className='nav-item'>
+              <div className='nav-link text-white sign-up'>
+                Войти
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  );
+};
+
+export default Navbar;

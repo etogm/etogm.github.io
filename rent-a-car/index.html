@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="h-100">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -19,10 +19,10 @@
     <link rel="stylesheet" href="css/style.css" />
     <title>Главная</title>
   </head>
-  <body>
+  <body class="d-flex flex-column h-100">
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow">
       <div class="container">
-        <a class="navbar-brand text-shadow" href="#">rent-a-car.ru</a>
+        <a class="navbar-brand text-shadow" href="index.html">rent-a-car.ru</a>
         <button
           class="navbar-toggler"
           type="button"
@@ -33,13 +33,12 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarRightAlignExample">
           <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link text-white" href="find.html"> Поиск </a>
+            </li>
+
             <li class="nav-item dropdown">
-              <a
-                class="nav-link text-white"
-                type="button"
-                id="dropdownMenuButton1"
-                data-bs-toggle="dropdown"
-              >
+              <a class="nav-link text-white" type="button">
                 Язык: <strong>RU</strong>
               </a>
               <ul class="dropdown-menu">
@@ -53,12 +52,7 @@
             </li>
 
             <li class="nav-item dropdown">
-              <a
-                class="nav-link text-white"
-                type="button"
-                id="dropdownMenuButton1"
-                data-bs-toggle="dropdown"
-              >
+              <a class="nav-link text-white" type="button">
                 Валюта: <strong>RUB</strong>
               </a>
               <ul class="dropdown-menu">
@@ -73,6 +67,7 @@
                 </li>
               </ul>
             </li>
+
             <li class="nav-item">
               <a class="nav-link text-white sign-up" href="#">Войти</a>
             </li>
@@ -142,60 +137,67 @@
         </div>
       </div>
     </header>
-    <main>
+    <main class="flex-shrink-0">
       <div class="container">
-        <h2 class="fw-bolder pt-3 mb-2">Каталог автомобилей</h2>
+        <h2 class="fw-bolder pt-3 mb-2">Часто задаваемые вопросы</h2>
 
-        <div class="row g-3">
-          <div class="col-4 bg-white p-3">
-            <div class="row">
-              <h6>Renault Duster or similar</h6>
-              <div class="col">
-                <span class="d-block">31 руб./день</span>
-                <strong class="d-block">Эконом</strong>
-
-                <button class="btn btn-primary rounded-pill mt-2">
-                  Подробнее
-                </button>
-              </div>
-              <div class="col">
-                <img
-                  class="card-img"
-                  src="http://static.rentcars.com/imagens/carros/renault_duster-2020-2021.png"
-                  alt=""
-                />
-              </div>
+        <div class="mt-2 mb-2">
+          <a
+            class="btn border-bottom text-start p-0 fw-bold text-primary w-100"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapseExample"
+          >
+            Какой то вопрос умный?
+          </a>
+          <div class="collapse show" id="collapseExample">
+            <div>
+              Some placeholder content for the collapse component. This panel is
+              hidden by default but revealed when the user activates the
+              relevant trigger.
             </div>
           </div>
         </div>
 
-        <h2 class="fw-bolder pt-3 mb-2">Часто задаваемые вопросы</h2>
-
-        <a data-bs-toggle="collapse" data-bs-target="#collapseExample">
-          Button with data-bs-target
-        </a>
-        <div class="collapse" id="collapseExample">
-          <div>
-            Some placeholder content for the collapse component. This panel is
-            hidden by default but revealed when the user activates the relevant
-            trigger.
+        <div class="mt-2 mb-2">
+          <a
+            class="btn border-bottom text-start p-0 fw-bold text-primary"
+            style="width: 100%"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapseExample"
+          >
+            Какой то вопрос глупый?
+          </a>
+          <div class="collapse" id="collapseExample">
+            <div>
+              Some placeholder content for the collapse component. This panel is
+              hidden by default but revealed when the user activates the
+              relevant trigger.
+            </div>
           </div>
         </div>
       </div>
     </main>
 
-    <footer class="footer bg-dark text-white-50 text-sm-start">
+    <footer class="footer mt-auto pt-3 bg-dark text-white-50 text-sm-start">
       <div class="container">
         <div class="row">
-          <div class="col mb-0 pt-4 pb-2">
+          <div class="col">
             <p>© 2021 rent-a-car.ru</p>
           </div>
-          <div class="col mb-0 pt-4 pb-2 text-sm-end">
+          <div class="col text-sm-end">
             <ul class="list-inline">
-              <li class="list-inline-item"><a class="text-white-50" href="#">Политика конфиденциальности</a></li>
-              <li class="list-inline-item"><a class="text-white-50" href="#">Условия использования</a></li>
-              <li class="list-inline-item"><a class="text-white-50" href="#">Контактные данные</a></li>
-            </ul> 
+              <li class="list-inline-item">
+                <a class="text-white-50" href="#"
+                  >Политика конфиденциальности</a
+                >
+              </li>
+              <li class="list-inline-item">
+                <a class="text-white-50" href="#">Условия использования</a>
+              </li>
+              <li class="list-inline-item">
+                <a class="text-white-50" href="#">Контактные данные</a>
+              </li>
+            </ul>
           </div>
         </div>
       </div>

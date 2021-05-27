@@ -1,27 +1,27 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const LocationCard = () => {
   return (
-    <div class='card'>
-      <div class='card-body'>
-        <h5 class='card-title text-primary fw-bolder mb-4'>Локация</h5>
+    <div className='card'>
+      <div className='card-body'>
+        <h5 className='card-title text-primary fw-bolder mb-4'>Локация</h5>
         <input
           type='text'
-          class='
+          className='
                   form-control
                   rounded-0
                   border-0 border-primary border-bottom
                   text-primary
                 '
-          id='exampleInputPassword1'
           placeholder='Введиете аэропорт или город'
           value='Аэропорт, г. Казань'
         />
-        <div class='row'>
-          <div class='col'>
+        <div className='row'>
+          <div className='col'>
             <input
               type='date'
-              class='
+              className='
                       form-control
                       rounded-0
                       border-0 border-primary border-bottom
@@ -29,10 +29,10 @@ const LocationCard = () => {
                     '
             />
           </div>
-          <div class='col'>
+          <div className='col'>
             <input
               type='date'
-              class='
+              className='
                       form-control
                       rounded-0
                       border-0 border-primary border-bottom
@@ -41,9 +41,9 @@ const LocationCard = () => {
             />
           </div>
         </div>
-        <button type='button' class='btn btn-primary mt-4 rounded-pill w-100'>
+        <Link to='/find' type='button' className='btn btn-primary mt-4 rounded-pill w-100'>
           Найти автомобиль
-        </button>
+        </Link>
       </div>
     </div>
   );

@@ -3,38 +3,21 @@ import LocationCard from '../common/LocationCard';
 import VehicleCard from '../common/VehicleCard';
 import Question from './Question';
 
+import vehiclesInfo from '../../data/vehicle';
+import questions from '../../data/question';
+
 const Home = () => {
-  const questions = [
-    {
-      id: 'question1',
-      question: 'What are the driving licence requirements?',
-      answer:
-        'A full driving license will be required at the rental desk in order for you to rent a car, provisional (learners) driving licenses are not accepted for the rental.',
-    },
-    {
-      id: 'question2',
-      question: 'What are the driving licence requirements?',
-      answer:
-        'A full driving license will be required at the rental desk in order for you to rent a car, provisional (learners) driving licenses are not accepted for the rental.',
-    },
-    {
-      id: 'question3',
-      question: 'What are the driving licence requirements?',
-      answer:
-        'A full driving license will be required at the rental desk in order for you to rent a car, provisional (learners) driving licenses are not accepted for the rental.',
-    },
-  ];
   return (
     <div>
       <header>
-        <div class='container pt-5 pb-5'>
-          <div class='row'>
-            <div class='col'>
-              <h1 class='text-white text-shadow'>
+        <div className='container pt-5 pb-5'>
+          <div className='row'>
+            <div className='col'>
+              <h1 className='text-white text-shadow'>
                 Недорогие автомобили в аренду
               </h1>
             </div>
-            <div class='col'>
+            <div className='col'>
               <LocationCard />
             </div>
           </div>
@@ -43,13 +26,14 @@ const Home = () => {
       <main>
         <div className='container'>
           <h2 className='fw-bolder pt-3 mb-2'>Транспорт</h2>
-          <VehicleCard />
-          <VehicleCard />
-          <VehicleCard />
-          <VehicleCard />
-          <h2 className='fw-bolder pt-3 mb-2'>Часто задаваемые вопросы</h2>
+          {vehiclesInfo.map((veh) => (
+            <VehicleCard veh={veh} key={veh.id} />
+          ))}
 
-          {questions.map(q => <Question key={q.id} question={q} />)}
+          <h2 className='fw-bolder pt-3 mb-2'>Часто задаваемые вопросы</h2>
+          {questions.map((q) => (
+            <Question key={q.id} question={q} />
+          ))}
         </div>
       </main>
     </div>

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Auth from './Auth';
 
 const Navbar = () => {
 
@@ -19,12 +20,6 @@ const Navbar = () => {
         </button>
         <div className='collapse navbar-collapse' id='navbarRightAlignExample'>
           <ul className='navbar-nav ms-auto mb-2 mb-lg-0'>
-            <li className='nav-item'>
-              <Link className='nav-link text-white' to='/find'>
-                Поиск
-              </Link>
-            </li>
-
             <li className='nav-item dropdown'>
               <div className='nav-link text-white' type='button'>
                 Язык: <strong>RU</strong>
@@ -67,9 +62,7 @@ const Navbar = () => {
             </li>
 
             <li className='nav-item'>
-              <div className='nav-link text-white sign-up'>
-                Войти
-              </div>
+              <Auth />
             </li>
           </ul>
         </div>

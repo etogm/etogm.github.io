@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Question = ( { id, question } ) => {
+const Question = ( { question } ) => {
   return (
     <div className='mt-2 mb-2'>
       <button

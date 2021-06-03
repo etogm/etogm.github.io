@@ -67,8 +67,8 @@ const Rent = () => {
               </div>
               <div className='text-end d-flex flex-column justify-content-between'>
                 <span className='d-block'>
-                  Цена за 3 дня:
-                  <strong className='d-block fs-4'>RUB 3565,12</strong>
+                  Цена за 7 дней:
+                  <strong className='d-block fs-4'>RUB 35512</strong>
                 </span>
               </div>
             </div>
@@ -114,7 +114,7 @@ const Rent = () => {
               <input
                 type='submit'
                 className='btn btn-primary rounded-pill mt-2'
-                value='Перейти к оплате'
+                value='Подтвердить аренду'
               />
             </form>
           </div>

@@ -25,7 +25,7 @@ const Home = () => {
       </header>
       <main>
         <div className='container'>
-          <h2 className='fw-bolder pt-3 mb-2'>Транспорт</h2>
+          <h2 className='fw-bolder pt-3 mb-2'>Популярное</h2>
           {vehiclesInfo.map((veh) => (
             <VehicleCard veh={veh} key={veh.id} />
           ))}

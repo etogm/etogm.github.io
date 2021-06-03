@@ -26,12 +26,12 @@ const Navbar = () => {
               </div>
               <ul className='dropdown-menu'>
                 <li>
-                  <div className='dropdown-item' href='#'>
+                  <div className='dropdown-item' href='#' type='button'>
                     RU
                   </div>
                 </li>
                 <li>
-                  <div className='dropdown-item' href='#'>
+                  <div className='dropdown-item' href='#' type='button'>
                     ENG
                   </div>
                 </li>
@@ -44,17 +44,17 @@ const Navbar = () => {
               </div>
               <ul className='dropdown-menu'>
                 <li>
-                  <div className='dropdown-item' href='#'>
+                  <div className='dropdown-item' href='#' type='button'>
                     RUB
                   </div>
                 </li>
                 <li>
-                  <div className='dropdown-item' href='#'>
+                  <div className='dropdown-item' href='#' type='button'>
                     USD
                   </div>
                 </li>
                 <li>
-                  <div className='dropdown-item' href='#'>
+                  <div className='dropdown-item' href='#' type='button'>
                     EUR
                   </div>
                 </li>

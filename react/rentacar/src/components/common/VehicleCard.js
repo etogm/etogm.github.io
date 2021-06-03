@@ -23,7 +23,7 @@ const VehicleCard = (props) => {
       </div>
       <div className='text-end d-flex flex-column justify-content-between'>
         <span className='d-block'>
-          Цена за 3 дня:
+          Цена за сутки:
           <strong className='d-block fs-4'>RUB {props.veh.price}</strong>
         </span>
 

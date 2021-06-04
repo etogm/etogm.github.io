@@ -1,0 +1,14 @@
+.img-collection {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: bisque;
+  text-align: center;
+  color: blue;
+  padding: 1rem;
+}
+
+.img-collection input:disabled {
+  color: black;
+  background-color: white;
+  width: 60%;
+}
